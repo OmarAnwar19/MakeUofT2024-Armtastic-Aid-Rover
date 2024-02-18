@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arm-Tastic Robot!</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center mt-4 mb-4">Arm-Tastic Robot!</h1>
+      <div class="row justify-content-center video-panel">
+        <div class="col-md-6">
+          <video
+            id="video"
+            class="w-100 mb-4"
+            width="450"
+            height="350"
+            autoplay
+          ></video>
+        </div>
+      </div>
+
+      <div class="control-panel">
+        <h2>Mobility Controls</h2>
+        <div id="mobility-controls" class="row justify-content-center">
+          <div class="col-md-6">
+            <button class="btn btn-primary w-100 mb-2" data-url="/forward">
+              Forward
+            </button>
+          </div>
+          <div class="col-md-6">
+            <button class="btn btn-primary w-100 mb-2" data-url="/backward">
+              Backward
+            </button>
+          </div>
+          <div class="col-md-6">
+            <button class="btn btn-primary w-100 mb-2" data-url="/left">
+              Left
+            </button>
+          </div>
+          <div class="col-md-6">
+            <button class="btn btn-primary w-100 mb-2" data-url="/right">
+              Right
+            </button>
+          </div>
+          <div class="col-md-12">
+            <button
+              class="btn btn-danger btn-block w-120 mb-2"
+              data-url="/stop"
+            >
+              Stop
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="control-panel mt-5">
+        <h2>Arm Controls</h2>
+        <div id="arm-controls" class="row justify-content-center">
+          <div class="col-md-6">
+            <button class="btn btn-primary w-100 mb-2" data-url="/rotateLeft">
+              Rotate Left
+            </button>
+          </div>
+          <div class="col-md-6">
+            <button class="btn btn-primary w-100 mb-2" data-url="/rotateRight">
+              Rotate Right
+            </button>
+          </div>
+          <div class="col-md-6">
+            <button
+              class="btn btn-primary w-100 mb-2"
+              data-url="/extendForward"
+            >
+              Extend Forward
+            </button>
+          </div>
+          <div class="col-md-6">
+            <button
+              class="btn btn-primary w-100 mb-2"
+              data-url="/extendBackward"
+            >
+              Extend Backward
+            </button>
+          </div>
+          <div class="col-md-6">
+            <button class="btn btn-primary w-100 mb-2" data-url="/extendUp">
+              Extend Upward
+            </button>
+          </div>
+          <div class="col-md-6">
+            <button class="btn btn-primary w-100 mb-2" data-url="/extendDown">
+              Extend Downward
+            </button>
+          </div>
+          <div class="col-md-6">
+            <button class="btn btn-primary w-100 mb-2" data-url="/openClaw">
+              Open Claw
+            </button>
+          </div>
+          <div class="col-md-6">
+            <button class="btn btn-primary w-100 mb-2" data-url="/closeClaw">
+              Close Claw
+            </button>
+          </div>
+          <div class="col-md-12">
+            <button
+              class="btn btn-danger btn-block w-120 mb-2"
+              data-url="/pwmStop"
+            >
+              Stop
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+  </body>
+</html>
