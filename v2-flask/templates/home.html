@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Arm-Tastic Robot!</title>
+    <title>Arm-Tastic Aid Robot</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -18,16 +18,15 @@
   </head>
   <body>
     <div class="container">
-      <h1 class="text-center mt-4 mb-4">Arm-Tastic Robot!</h1>
+      <h1 class="text-italic mt-4 mb-4">Arm-Tastic Robot!</h1>
       <div class="row justify-content-center video-panel">
         <div class="col-md-6">
-          <video
-            id="video"
+          <img
+            src="{{ url_for('video_feed') }}"
+            width="640"
+            height="480"
             class="w-100 mb-4"
-            width="450"
-            height="350"
-            autoplay
-          ></video>
+          />
         </div>
       </div>
 
@@ -94,7 +93,7 @@
               Extend Backward
             </button>
           </div>
-          <div class="col-md-6">
+          <!-- <div class="col-md-6">
             <button class="btn btn-primary w-100 mb-2" data-url="/extendUp">
               Extend Upward
             </button>
@@ -103,7 +102,7 @@
             <button class="btn btn-primary w-100 mb-2" data-url="/extendDown">
               Extend Downward
             </button>
-          </div>
+          </div> -->
           <div class="col-md-6">
             <button class="btn btn-primary w-100 mb-2" data-url="/openClaw">
               Open Claw
