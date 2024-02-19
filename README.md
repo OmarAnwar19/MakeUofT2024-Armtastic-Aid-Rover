@@ -63,6 +63,6 @@ We have many ideas for improving and expanding our project, such as:
 ## Image Gallery
 
 ![Side View 1](./assets/img/side-view1.JPG)
-![Side View 2](./assets/img/side-view2.jJPGpg)
+![Side View 2](./assets/img/side-view2.JPG)
 ![Top View](./assets/img/top-down.jpg)
 ![In Progress](./assets/img/in-progress.JPG)
